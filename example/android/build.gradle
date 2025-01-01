@@ -21,9 +21,21 @@ allprojects {
 rootProject.buildDir = '../build'
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
+    afterEvaluate {
+        android {
+            compileSdkVersion = 33 // Ensure this matches the version in your app module
+            targetSdkVersion = 33
+        }
+    }
 }
 subprojects {
     project.evaluationDependsOn(':app')
+    afterEvaluate {
+        android {
+            compileSdkVersion = 33 // Ensure this matches the version in your app module
+            targetSdkVersion = 33
+        }
+    }
 }
 
 task clean(type: Delete) {

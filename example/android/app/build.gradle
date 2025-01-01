@@ -41,7 +41,7 @@ android {
     defaultConfig {
         applicationId "com.app.rtmp_publisher_example"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 33
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
